@@ -20,6 +20,10 @@ module.exports = function (source) {
     }
 
     const output = JSON.parse(solc.compile(JSON.stringify(input)))
+    if (output.errors) {
+        throw new Error(JSON.stringify(output.errors))
+    }
+
     const contractNames = Object.keys(output.contracts[filename])
     const contracts = contractNames.map(name => ({
         bytecode: '0x' + output.contracts[filename][name].evm.bytecode.object,
