@@ -23,7 +23,7 @@ npm install webpack-sol-loader --save-dev
 
 ## Usage
 
-Add this to your `webpack.config.ts`:
+Update your `webpack.config.ts`:
 
 ```ts
 const config: Configuration = {
