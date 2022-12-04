@@ -1,6 +1,6 @@
 {
   "name": "webpack-sol-loader",
-  "version": "0.1.241",
+  "version": "0.1.242",
   "description": "Simple webpack loader for .sol files and typescript support.",
   "repository": {
     "type": "git",

@@ -44,10 +44,6 @@ import wallet from './wallet.sol'
 // => returns SolidityDocument or SolidityDocumentCollection that are written above.
 ```
 
-### Example webpack config
-
-
-
 ## Types
 
 Create file webpack-sol-loader.d.ts and include the following:
