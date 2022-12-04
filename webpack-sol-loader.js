@@ -1,5 +1,13 @@
 const path = require('path')
 const solc = require('solc')
+const fs = require('fs')
+
+function getFindImports(resourcePath) {
+    return function findImports(relativePath) {
+        const source = fs.readFileSync(path.join(path.dirname(resourcePath), relativePath), 'utf8');
+        return { contents: source };
+    }
+}
 
 module.exports = function (source) {
     const filename = path.basename(this.resourcePath)
@@ -19,7 +27,7 @@ module.exports = function (source) {
         }
     }
 
-    const output = JSON.parse(solc.compile(JSON.stringify(input)))
+    const output = JSON.parse(solc.compile(JSON.stringify(input), { import: getFindImports(this.resourcePath) }))
     if (output.errors) {
         throw new Error(JSON.stringify(output.errors))
     }
@@ -36,3 +44,4 @@ module.exports = function (source) {
 
     return `export default ${JSON.stringify(contracts)}`;
 }
+
