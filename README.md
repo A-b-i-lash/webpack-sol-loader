@@ -23,15 +23,7 @@ npm install webpack-sol-loader --save-dev
 
 ## Usage
 
-Create webpack-sol-loader.d.ts file
-```ts
-import wallet from './wallet.sol'
-// => returns SolidityDocument or SolidityDocumentCollection that are written above.
-```
-
-### Example webpack config
-
-At your project's `webpack.config.ts`:
+Add this to your `webpack.config.ts`:
 
 ```ts
 const config: Configuration = {
@@ -45,6 +37,16 @@ const config: Configuration = {
 	}
 }
 ```
+
+Just import .sol file
+```ts
+import wallet from './wallet.sol'
+// => returns SolidityDocument or SolidityDocumentCollection that are written above.
+```
+
+### Example webpack config
+
+
 
 ## Types
 
