@@ -1,6 +1,6 @@
 {
   "name": "webpack-sol-loader",
-  "version": "0.1.3",
+  "version": "0.1.33",
   "description": "Simple webpack loader for .sol files and typescript support.",
   "repository": {
     "type": "git",
@@ -23,8 +23,5 @@
   "homepage": "https://github.com/V1xel/webpack-sol-loader.git",
   "devDependencies": {
     "solc": "^0.8.17"
-  },
-  "publishConfig": {
-    "@v1xel:registry": "https://npm.pkg.github.com"
   }
 }
