@@ -23,5 +23,8 @@
   "homepage": "https://github.com/V1xel/webpack-sol-loader.git",
   "devDependencies": {
     "solc": "^0.8.17"
+  },
+  "publishConfig": {
+    "@v1xel:registry": "https://npm.pkg.github.com"
   }
 }
