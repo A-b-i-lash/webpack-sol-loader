@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/V1xel/webpack-sol-loader.git",
   "devDependencies": {
-    "solc": "^0.8.17"
+    "solc": "^0.8.20"
   }
 }
